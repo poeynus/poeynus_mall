@@ -1,10 +1,12 @@
 extends layouts/main.pug
 
 block content
+    .event-container
+        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw-yn5P_1s-1aJiBGhPo4W5pUtUPBi-57cbA&usqp=CAU")
     .goods
         each item in goods
             a(href=routes.goodsDetail(item.id))
                 h1= item.title
                 h2= item.description
                 h3= item.pays
-                img(src="https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2F20160630_178%2F14672613872631r9U1_JPEG%2FID_dOghcEG6RzMVw4LB7lwIuARws.jpg&type=sc960_832")
+                img(src=item.fileUrl)

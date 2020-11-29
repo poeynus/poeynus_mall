@@ -1,11 +1,17 @@
-import {goods} from "../db";
+import Goods from "../models/Goods";
 import routes from "../routes";
 
-export const home = (req, res) => {
-    const {
-        query: {gName}
-    } = req;
+export const home = async(req, res) => {
+  const {
+      query: {gName}
+  } = req;
+  try{
+    const goods = await Goods.find({}).sort({_id: -1});
     res.render("home", {searchingBy:gName, goods:goods});
+  } catch(error){
+    console.log(error);
+    res.render("home", {searchingBy:gName, goods:[]});
+  }
 };
 
 export const getJoin = (req, res) => res.render("join");
@@ -33,9 +39,15 @@ export const postLogin = (req, res) => {
 export const logout = (req, res) => {
     res.redirect(routes.home);;
 };
-export const search = (req, res) => {
+export const search = async(req, res) => {
     const {
         query: {gName}
     } = req;
+    let goods = [];
+    try {
+      goods = await Goods.find({title: {$regex: gName, $options: "i"}});
+    } catch(error) {
+      console.log(error);
+    }
     res.render("search", {searchingBy:gName, goods:goods});
 };

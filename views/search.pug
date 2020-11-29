@@ -4,8 +4,11 @@ block content
     .search__header
         h3 Searching By #{searchingBy}
     .search__goods
+        if goods.length === 0
+            h5 No Goods Found
         each item in goods
-            h1= item.title
-            h2= item.description
-            h3= item.pays
-            img(src="https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2F20160630_178%2F14672613872631r9U1_JPEG%2FID_dOghcEG6RzMVw4LB7lwIuARws.jpg&type=sc960_832")    
+            a(href=routes.goodsDetail(item.id))
+                h1= item.title
+                h2= item.description
+                h3= item.pays
+                img(src=item.fileUrl)

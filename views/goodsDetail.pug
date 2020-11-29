@@ -1,4 +1,10 @@
 extends layouts/main.pug
 
 block content
-    
+    .goods__form
+        img(src=`/${goods.fileUrl}`)
+    .goods__info
+        a(href=routes.editGoods(goods.id)) Edit Goods
+        h5.goods__title=goods.title
+        span.goods__pays=goods.pays
+        p.goods__description=goods.description
