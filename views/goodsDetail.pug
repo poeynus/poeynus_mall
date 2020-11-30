@@ -2,9 +2,13 @@ extends layouts/main.pug
 
 block content
     .goods__form
-        img(src=`/${goods.fileUrl}`)
-    .goods__info
-        a(href=routes.editGoods(goods.id)) Edit Goods
-        h5.goods__title=goods.title
-        span.goods__pays=goods.pays
-        p.goods__description=goods.description
+        h1.goods__title=goods.title
+        .goods__form-img
+            img(src=`/${goods.fileUrl}`)
+    .goods__form-info
+        .goods__form-container
+            a(href=routes.editGoods(goods.id)) Edit Goods
+            p.goods__pays=`${goods.pays} 원`
+        .goods__form-description    
+            p.goods_d="Description"
+            p.goods__description=goods.description

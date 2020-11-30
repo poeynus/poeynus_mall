@@ -2,11 +2,12 @@ extends layouts/main.pug
 
 block content
     .event-container
-        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw-yn5P_1s-1aJiBGhPo4W5pUtUPBi-57cbA&usqp=CAU")
+        img(src="https://postfiles.pstatic.net/MjAyMDExMzBfMjM0/MDAxNjA2NzM1Nzk3ODUw.gbBDZDeDXxkKafcZ9E08AqnIrmAeFlT2fu1Dfaml2Z0g.sZNs83YVhrBef7LHYR-lXl_1RxTLJo_ksBCTgDIiwKAg.PNG.poeynus/%EC%BA%A1%EC%B2%98-removebg-preview.png?type=w966")
     .goods
         each item in goods
-            a(href=routes.goodsDetail(item.id))
-                h1= item.title
-                h2= item.description
-                h3= item.pays
-                img(src=item.fileUrl)
+            .goods_content
+                a(href=routes.goodsDetail(item.id))
+                    img(src=item.fileUrl)
+                    .goods_main_description
+                        h1= item.title
+                        h2= `${item.pays} 원`

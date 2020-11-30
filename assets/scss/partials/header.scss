@@ -1,0 +1,45 @@
+.header {
+  background-color: skyblue;
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+}
+.hIcon {
+  font-size: 30px;
+  color: white;
+}
+ul {
+  display: flex;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 5px;
+  li:not(:last-child) {
+    margin-right: 15px;
+  }
+  a {
+    color: white;
+    font-size: 15px;
+  }
+}
+.a {
+  text-decoration: none;
+}
+.header__column {
+  margin-top: 20px;
+  form {
+    width: 400px;
+    input {
+      padding: 7px 10px;
+      width: 400px;
+      border-radius: 5px;
+      font-size: 14px;
+      color: black;
+      font-weight: 600;
+      &::placeholder {
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+}

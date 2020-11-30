@@ -1,0 +1,60 @@
+.goods__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: $prettySalgu;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .goods__form-img {
+    img {
+      width: 600px;
+      height: 400px;
+      border: 3px solid black;
+      border-radius: 15px;
+    }
+  }
+}
+.goods__form-info {
+  height: 100%;
+  max-height: 1000px;
+  width: 100%;
+  max-width: 1600px;
+  margin-top: 10px;
+  .goods__form-container {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      font-size: 20px;
+    }
+    .goods__pays {
+      font-size: 25px;
+    }
+  }
+  .goods__form-description {
+    margin: 10px;
+    padding: 10px;
+    .goods_d {
+      font-size: 40px;
+      font-weight: 600;
+      background-color: rgb(220, 220, 220);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .goods__description {
+      word-wrap: break-word;
+      font-weight: 600;
+      font-size: 30px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      background-color: rgb(220, 220, 220);
+      border-radius: 10px;
+    }
+  }
+}
