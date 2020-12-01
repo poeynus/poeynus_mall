@@ -7,8 +7,9 @@ block content
         if goods.length === 0
             h5 No Goods Found
         each item in goods
-            a(href=routes.goodsDetail(item.id))
-                img(src=item.fileUrl)
-                h1= item.title
-                h2= item.description
-                h3= item.pays
+            .search__content
+                a(href=routes.goodsDetail(item.id))
+                    img(src=item.fileUrl)
+                    .search_main_description
+                        h1= item.title
+                        h2= `${item.pays} 원`

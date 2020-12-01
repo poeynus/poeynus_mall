@@ -1,11 +1,13 @@
 extends layouts/main.pug
 
 block content
-    .form-container
-        form(action=`/goods${routes.upload}`, method="post", enctype="multipart/form-data")
-            label(for="file") Goods file
-            input(type="file", id="file", name="goodsFile" accept="image/*", required=true)
-            input(type="text", placeholder="Title", name="title", required=true)
-            textarea(name="pays", placeholder="Pays", required=true)
-            textarea(name="description", placeholder="Description", required=true)
-            input(type="submit", value="Upload Goods")
+    .form-upload
+        .form-container
+            form(action=`/goods${routes.upload}`, method="post", enctype="multipart/form-data")
+                label(for="file") Upload Goods
+                p
+                input(type="file", id="file", name="goodsFile" accept="image/*", required=true)
+                input(type="text", placeholder="Title", name="title", required=true)
+                textarea(name="pays", placeholder="Pays", required=true)
+                textarea(class="uploadD", name="description", placeholder="Description", required=true)
+                input(type="submit", value="Upload Goods")

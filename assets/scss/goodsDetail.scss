@@ -7,10 +7,11 @@
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: $prettySalgu;
+    background-color: #3a5998;
     text-align: center;
     padding: 5px;
     border-radius: 10px;
+    color: white;
   }
   .goods__form-img {
     img {
@@ -32,9 +33,18 @@
     justify-content: space-evenly;
     a {
       font-size: 20px;
+      text-decoration: none;
+      background-color: skyblue;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
     }
     .goods__pays {
       font-size: 25px;
+      padding: 5px;
+      background-color: #3a5998;
+      border-radius: 5px;
+      color: white;
     }
   }
   .goods__form-description {
@@ -43,9 +53,10 @@
     .goods_d {
       font-size: 40px;
       font-weight: 600;
-      background-color: rgb(220, 220, 220);
+      background-color: rgb(247, 221, 193);
       border-radius: 10px;
       text-align: center;
+      width: 300px;
     }
     .goods__description {
       word-wrap: break-word;
@@ -53,7 +64,7 @@
       font-size: 30px;
       margin-top: 25px;
       margin-bottom: 25px;
-      background-color: rgb(220, 220, 220);
+      background-color: rgb(247, 221, 193);
       border-radius: 10px;
     }
   }

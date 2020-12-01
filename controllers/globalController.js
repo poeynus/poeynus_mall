@@ -45,7 +45,7 @@ export const search = async(req, res) => {
     } = req;
     let goods = [];
     try {
-      goods = await Goods.find({title: {$regex: gName, $options: "i"}});
+      goods = await Goods.find({title: {$regex: gName, $options: "i"}}).sort({_id: -1});
     } catch(error) {
       console.log(error);
     }
